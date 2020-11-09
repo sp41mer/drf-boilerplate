@@ -18,4 +18,4 @@ until postgres_ready; do
 done
 >&2 echo "Postgres is up - continuing..."
 
-python manage.py migrate && gunicorn conf.wsgi:application --bind 0.0.0.0:8019
+python manage.py migrate && gunicorn conf.wsgi:application --bind 0.0.0.0:8000
