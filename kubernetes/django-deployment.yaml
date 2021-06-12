@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+        - name: web
+          # build the image from the repo Dockerfile and push it to your
+          # registry, e.g. registry.example.com/drf-boilerplate:latest
+          image: drf-boilerplate:latest
+          imagePullPolicy: "IfNotPresent"
+          command: ["/bin/sh", "entrypoint.sh"]
+          ports:
+            - containerPort: 8000
+          envFrom:
+            - configMapRef:
+                name: postgres-config
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 8000
+            initialDelaySeconds: 5
+            periodSeconds: 10
