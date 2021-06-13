@@ -1,5 +1,7 @@
 # Django REST Framework — project boilerplate
 
+[![CI](https://github.com/sp41mer/drf-boilerplate/actions/workflows/ci.yml/badge.svg)](https://github.com/sp41mer/drf-boilerplate/actions/workflows/ci.yml)
+
 The skeleton I start DRF lecture projects from (see `drf-orm-extended`,
 `drf-test-examples`, `drf-gql-example` — all grew out of this).
 

@@ -1,3 +1,5 @@
 [flake8]
 max-line-length = 100
 exclude = .git,__pycache__,*/migrations/*
+per-file-ignores =
+    conf/local_settings_example.py: F403,F405,W292
