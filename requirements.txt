@@ -1,6 +1,6 @@
 Django==2.2.24
 django-dynamic-fixture==2.0.0
-djangorestframework==3.12.4
+djangorestframework==3.17.2
 gunicorn==19.9.0
 psycopg2-binary==2.8.6
 pytz==2018.9
